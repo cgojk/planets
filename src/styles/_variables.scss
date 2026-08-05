@@ -1,0 +1,77 @@
+
+
+// * ==========================================
+//    DESIGN TOKENS
+//    ========================================== */
+
+:root {
+
+  /* ==========================================
+     COLORS
+     ========================================== */
+
+--neutral-950:hsl(0,0%,0%);
+--neutral-300:hsl(0,0%,85%);
+--neutral-0:hsl(0,0%,100%);
+
+--aqua-100:hsl(196,46%,79%);
+--aqua-50:hsl(196,83%,93%);
+
+--navy-950:hsl(240,67%,8%);
+--teal-400:hsl(169,73%,44%);
+
+--purple-600:hsl(263,67%,51%);
+--bronze-700:hsl(30,47%,49%);
+
+--red-500:hsl(2,68%,53%);
+--orange-600:hsl(10,63%,51%);
+
+--amber-400:hsl(33,82%,61%);
+--blue-600:hsl(222,87%,56%);
+
+--sky-400:hsl(194,48%,49%);
+
+
+
+  /* ==========================================
+     FONT FAMILIES
+     ========================================== */
+
+--font-body: "League Spartan", sans-serif;
+--font-heading: "Antonio", sans-serif;
+
+// .league-spartan-regular {
+//   font-family: "League Spartan", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// .league-spartan-bold {
+//   font-family: "League Spartan", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+// .antonio-regular {
+//   font-family: "Antonio", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+
+
+  /* ==========================================
+     TYPOGRAPHY PRESETS
+     (Mobile First)
+     ========================================== */
+
+  /* Display */
+
+  --font-1-family: var(--font-heading);
+    --font-1-weight: 400;
+    --font-1-size: 80px;
+    --font-1-line-height: 130%;
+    --letter-spacing:0;
+
+}
