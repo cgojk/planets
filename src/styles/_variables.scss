@@ -40,24 +40,10 @@
 --font-body: "League Spartan", sans-serif;
 --font-heading: "Antonio", sans-serif;
 
-// .league-spartan-regular {
-//   font-family: "League Spartan", sans-serif;
-//   font-optical-sizing: auto;
-//   font-weight: 400;
-//   font-style: normal;
-// }
-// .league-spartan-bold {
-//   font-family: "League Spartan", sans-serif;
-//   font-optical-sizing: auto;
-//   font-weight: 700;
-//   font-style: normal;
-// }
-// .antonio-regular {
-//   font-family: "Antonio", sans-serif;
-//   font-optical-sizing: auto;
-//   font-weight: 400;
-//   font-style: normal;
-// }
+--font1-fw:400;
+--font2-fw:700;
+
+
 
 
 
@@ -67,11 +53,185 @@
      ========================================== */
 
   /* Display */
+// text present 1
 
-  --font-1-family: var(--font-heading);
-    --font-1-weight: 400;
-    --font-1-size: 80px;
-    --font-1-line-height: 130%;
-    --letter-spacing:0;
+/* ==========================================
+   FONT FAMILIES
+   ========================================== */
 
+--font-body: "League Spartan", sans-serif;
+--font-heading: "Antonio", sans-serif;
+
+--font1-fw: 400;
+--font2-fw: 700;
+
+
+/* ==========================================
+   TYPOGRAPHY PRESETS
+   ========================================== */
+
+/* Text Preset 1 */
+--font-1-family: var(--font-heading);
+--font-1-weight: 400;
+--font-1-size: 80px;
+--font-1-line-height: 130%;
+--font-1-letter-spacing: 0;
+
+--font-1-bold: var(--font-1-weight) var(--font-1-size) / var(--font-1-line-height) var(--font-1-family);
+
+
+/* Text Preset 2 */
+--font-2-family: var(--font-heading);
+--font-2-weight: 400;
+--font-2-size: 48px;
+--font-2-line-height: 130%;
+--font-2-letter-spacing: 0;
+
+--font-2-bold: var(--font-2-weight) var(--font-2-size) / var(--font-2-line-height) var(--font-2-family);
+
+
+/* Text Preset 3 */
+--font-3-family: var(--font-heading);
+--font-3-weight: 400;
+--font-3-size: 40px;
+--font-3-line-height: 130%;
+--font-3-letter-spacing: -1.5px;
+
+--font-3-bold: var(--font-3-weight) var(--font-3-size) / var(--font-3-line-height) var(--font-3-family);
+
+
+/* Text Preset 4 */
+--font-4-family: var(--font-heading);
+--font-4-weight: 400;
+--font-4-size: 28px;
+--font-4-line-height: 130%;
+--font-4-letter-spacing: -1px;
+
+--font-4-bold: var(--font-4-weight) var(--font-4-size) / var(--font-4-line-height) var(--font-4-family);
+
+
+/* Text Preset 5 */
+--font-5-family: var(--font-heading);
+--font-5-weight: 400;
+--font-5-size: 24px;
+--font-5-line-height: 130%;
+--font-5-letter-spacing: -1px;
+
+--font-5-bold: var(--font-5-weight) var(--font-5-size) / var(--font-5-line-height) var(--font-5-family);
+
+
+/* Text Preset 6 */
+--font-6-family: var(--font-heading);
+--font-6-weight: 400;
+--font-6-size: 20px;
+--font-6-line-height: 130%;
+--font-6-letter-spacing: -0.75px;
+
+--font-6-bold: var(--font-6-weight) var(--font-6-size) / var(--font-6-line-height) var(--font-6-family);
+
+
+/* Text Preset 7 */
+--font-7-family: var(--font-body);
+--font-7-weight: 700;
+--font-7-size: 15px;
+--font-7-line-height: 165%;
+--font-7-letter-spacing: 1.35px;
+
+--font-7-bold: var(--font-7-weight) var(--font-7-size) / var(--font-7-line-height) var(--font-7-family);
+
+
+/* Text Preset 8 Bold */
+--font-8-family: var(--font-body);
+--font-8-weight: 700;
+--font-8-size: 13px;
+--font-8-line-height: 180%;
+--font-8-letter-spacing: 0;
+
+--font-8-bold: var(--font-8-weight) var(--font-8-size) / var(--font-8-line-height) var(--font-8-family);
+
+
+/* Text Preset 8 Regular */
+--fontregular-8-family: var(--font-body);
+--fontregular-8-weight: 400;
+--fontregular-8-size: 14px;
+--fontregular-8-line-height: 180%;
+--fontregular-8-letter-spacing: 0;
+
+--font-8-regular: var(--fontregular-8-weight) var(--fontregular-8-size) / var(--fontregular-8-line-height) var(--fontregular-8-family);
+
+
+/* Text Preset 9 Bold */
+--font-9-family: var(--font-body);
+--font-9-weight: 700;
+--font-9-size: 12px;
+--font-9-line-height: 210%;
+--font-9-letter-spacing: 2.5px;
+
+--font-9-bold: var(--font-9-weight) var(--font-9-size) / var(--font-9-line-height) var(--font-9-family);
+
+
+/* Text Preset 9 Regular */
+--fontregular-9-family: var(--font-body);
+--fontregular-9-weight: 400;
+--fontregular-9-size: 12px;
+--fontregular-9-line-height: 210%;
+--fontregular-9-letter-spacing: 2.5px;
+
+--font-9-regular: var(--fontregular-9-weight) var(--fontregular-9-size) / var(--fontregular-9-line-height) var(--fontregular-9-family);
+
+
+/* Text Preset 10 Bold */
+--font-10-family: var(--font-body);
+--font-10-weight: 700;
+--font-10-size: 11px;
+--font-10-line-height: 225%;
+--font-10-letter-spacing: 1px;
+
+--font-10-bold: var(--font-10-weight) var(--font-10-size) / var(--font-10-line-height) var(--font-10-family);
+
+
+/* Text Preset 10 Regular */
+--fontregular-10-family: var(--font-body);
+--fontregular-10-weight: 400;
+--fontregular-10-size: 11px;
+--fontregular-10-line-height: 200%;
+--fontregular-10-letter-spacing: 0;
+
+--font-10-regular: var(--fontregular-10-weight) var(--fontregular-10-size) / var(--fontregular-10-line-height) var(--fontregular-10-family);
+
+
+/* Text Preset 11 Bold */
+--font-11-family: var(--font-body);
+--font-11-weight: 700;
+--font-11-size: 9px;
+--font-11-line-height: 275%;
+--font-11-letter-spacing: 2px;
+
+--font-11-bold: var(--font-11-weight) var(--font-11-size) / var(--font-11-line-height) var(--font-11-family);
+
+
+/* Text Preset 12 Bold */
+--font-12-family: var(--font-body);
+--font-12-weight: 700;
+--font-12-size: 8px;
+--font-12-line-height: 200%;
+--font-12-letter-spacing: 0.75px;
+
+--font-12-bold: var(--font-12-weight) var(--font-12-size) / var(--font-12-line-height) var(--font-12-family);
+    
+// =======================================================================
+//                                SPACE
+// =======================================================================
+
+--space-1: 4px;
+--space-2: 6px;
+--space-3: 8px;
+--space-4: 10px;
+--space-5: 16px;
+--space-6: 20px;
+--space-7: 24px;
+--space-8: 30px;
+--space-9: 32px;
+--space-10: 40px;
+--space-11:48px;
 }
