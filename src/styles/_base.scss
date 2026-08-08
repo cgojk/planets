@@ -35,7 +35,9 @@ body {
 
 .nav-logo{
  
-  height: auto;
+  font:var(--font-4-bold);
+  color:var(--neutral-0);
+
 }
 
 .header{
@@ -51,8 +53,8 @@ body {
   display: flex;
    justify-content: space-between;
   align-items: center;
-  padding:var(--spacing-250);
-border-bottom:1px solid var(--clr-gray-300);
+  padding:var(--space-8);
+
 }
 .menu-btn {
     display:none; 
@@ -62,13 +64,14 @@ border-bottom:1px solid var(--clr-gray-300);
     display:block;
     background:none;
     border:none;
-    font:var(--font-9-bold);
+    font:var(--font-10-bold);
+    color:var(--neutral-0);
     cursor:pointer;
     margin-left:auto;
     z-index:2100;
     margin-top:-0.3em;
-    padding:var(--spacing-100);
-    background-color: var(--clr-gray-300);
+    padding:var(--space-8);
+   
     position: relative;
     
 }
@@ -177,4 +180,14 @@ a {
   text-decoration: none;
   color: inherit;
   cursor:pointer;
+}
+
+
+
+// ==========================overview styles===============================
+// ========================================================================
+
+.overview__item__name{
+  font:var(--font-3-bold);
+  color:var(--neutral-0);
 }

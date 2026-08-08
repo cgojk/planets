@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 
-export default function Overview() {
+export default function Structure() {
   const {planetName } = useParams();
 
   const planet = data.find(
@@ -14,22 +14,20 @@ export default function Overview() {
   }
 
   return (
-    <div className="overview">
-      <div className="overview__inner container">
+    <div className="structure">
+      <div className="structure__inner container">
 
-       
+        <h1 className="structure__item__name">
+          {planet.name}
+        </h1>
 
         <img
           src={planet.images.planet}
           alt={planet.name}
-          className="overview__item__image"
+          className="structure__item__image"
         />
 
-         <h1 className="overview__item__name">
-          {planet.name}
-        </h1>
-
-        <p className="overview__item__content">
+        <p className="structure__item__content">
           {planet.overview.content}
         </p>
 
@@ -37,7 +35,7 @@ export default function Overview() {
           href={planet.overview.source}
           target="_blank"
           rel="noopener noreferrer"
-          className="overview__item__source"
+          className="structure__item__source"
         >
           Source: Wikipedia
         </a>

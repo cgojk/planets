@@ -1,18 +1,17 @@
 
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-// import NotFound from "./pages/NotFound";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
-// import Home from "./pages/Home";
 import Overview from "./components/Overview";
 export default function App() {
 
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Overview />} />
-        <Route path="/overview" element={<Overview />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="/" element={<Navigate to="/earth" replace />} />
+    <Route path="/:planetName" element={<Overview />} />
+      
+       
       </Route>
     </Routes>
   );

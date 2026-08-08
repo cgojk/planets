@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import data from "../data.json";
 
 export default function Overview() {
-  const {planetName } = useParams();
+  const { planetName } = useParams();
 
   const planet = data.find(
     (p) => p.name.toLowerCase() === planetName.toLowerCase()
@@ -17,17 +17,15 @@ export default function Overview() {
     <div className="overview">
       <div className="overview__inner container">
 
-       
+        <h1 className="overview__item__name">
+          {planet.name}
+        </h1>
 
         <img
           src={planet.images.planet}
           alt={planet.name}
           className="overview__item__image"
         />
-
-         <h1 className="overview__item__name">
-          {planet.name}
-        </h1>
 
         <p className="overview__item__content">
           {planet.overview.content}
