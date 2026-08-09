@@ -14,7 +14,7 @@ export default function Overview() {
   }
 
   return (
-    <div className="overview">
+    <section className="overview">
       <div className="overview__inner container">
 
        
@@ -41,13 +41,15 @@ export default function Overview() {
         >
           Source: Wikipedia
         </a>
-
-        <p>Rotation Time: {planet.rotation}</p>
-        <p>Revolution Time: {planet.revolution}</p>
-        <p>Radius: {planet.radius}</p>
-        <p>Temperature: {planet.temperature}</p>
-
+   </div>
+      <div className="overview__item__details">
+        <p className="item__detail">Rotation Time: {planet.rotation}</p>
+        <p className="item__detail">Revolution Time: {planet.revolution}</p>
+        <p className="item__detail">Radius: {planet.radius}</p>
+        <p className="item__detail">Temperature: {planet.temperature}</p>
       </div>
-    </div>
+
+   
+    </section>
   );
 }
