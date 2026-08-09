@@ -42,12 +42,12 @@ export default function Overview() {
           Source: Wikipedia
         </a>
    </div>
-      <div className="overview__item__details">
-        <p className="item__detail">Rotation Time: {planet.rotation}</p>
-        <p className="item__detail">Revolution Time: {planet.revolution}</p>
-        <p className="item__detail">Radius: {planet.radius}</p>
-        <p className="item__detail">Temperature: {planet.temperature}</p>
-      </div>
+      <ul className="overview__item__details">
+       <li className="item__result"> <p className="item__detail">Rotation Time</p><span className="result time_rotation"> {planet.rotation}</span></li>
+        <li className="item__result"><p className="item__detail">Revolution Time</p><span className="result time_revolution"> {planet.revolution}</span></li>
+        <li className="item__result"><p className="item__detail">Radius</p><span className="result radius"> {planet.radius}</span></li>
+        <li className="item__result"><p className="item__detail">Temperature</p><span className="result temperature"> {planet.temperature}</span></li>
+      </ul>
 
    
     </section>

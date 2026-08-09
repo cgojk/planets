@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap");
 /* RESET */
 /* Box sizing rules */
 *,
@@ -152,26 +153,43 @@ textarea:not([rows]) {
      ========================================== */
   /* Heading 1 */
   --font-1: 400 80px / 130% var(--antonio);
+  --font-1-letter-spacing: 0;
   /* Heading 2 */
   --font-2: 400 48px / 130% var(--antonio);
+  --font-2-letter-spacing: 0;
   /* Heading 3 */
   --font-3: 400 40px / 130% var(--antonio);
+  --font-3-letter-spacing: -1.5px;
   /* Heading 4 */
   --font-4: 400 28px / 130% var(--antonio);
+  --font-4-letter-spacing: -1px;
   /* Heading 5 */
   --font-5: 400 24px / 130% var(--antonio);
+  --font-5-letter-spacing: -1px;
   /* Heading 6 */
   --font-6: 400 20px / 130% var(--antonio);
+  --font-6-letter-spacing: -0.75px;
   /* Body */
   --font-7: 700 15px / 165% var(--league-spartan);
+  --font-7-letter-spacing: 1.35px;
   --font-8-bold: 700 13px / 180% var(--league-spartan);
+  --font-8-bold-letter-spacing: 0;
   --font-8-regular: 400 14px / 180% var(--league-spartan);
+  --font-8-regular-letter-spacing: 0;
   --font-9-bold: 700 12px / 210% var(--league-spartan);
+  --font-9-bold-letter-spacing: 2.5px;
   --font-9-regular: 400 12px / 210% var(--league-spartan);
+  --font-9-regular-letter-spacing: 0;
   --font-10-bold: 700 11px / 225% var(--league-spartan);
+  --font-10-bold-letter-spacing: 1px;
   --font-10-regular: 400 11px / 200% var(--league-spartan);
+  --font-10-regular-letter-spacing: 0;
   --font-11-bold: 700 9px / 275% var(--league-spartan);
+  --font-11-bold-letter-spacing: 2px;
   --font-12-bold: 700 8px / 200% var(--league-spartan);
+  --font-12-bold-letter-spacing: 0.75px;
+  --font-12-regular: 400 8px / 200% var(--league-spartan);
+  --font-12-regular-letter-spacing: 0.75px;
   --space-1: 4px;
   --space-2: 6px;
   --space-3: 8px;
@@ -226,7 +244,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-8);
+  padding: 0 0 var(--space-8) var(--space-4);
 }
 
 .menu-btn {
@@ -319,7 +337,51 @@ a {
 }
 
 /* ========================== OVERVIEW ================================ */
+.overview {
+  margin-top: var(--space-11);
+}
+
 .overview__item__name {
   font: var(--font-3);
   color: var(--neutral-0);
+}
+
+.overview__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  padding: var(--space-10);
+}
+.overview__inner .overview__item__content {
+  font: var(--font-10-regular);
+  letter-spacing: var(--font-10-regular-letter-spacing);
+  color: var(--neutral-400);
+}
+
+.overview__item__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-left: 0;
+}
+.overview__item__details .item__result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--neutral-0);
+  padding: var(--space-4);
+}
+.overview__item__details .item__result .item__detail {
+  font: var(--font-12-regular);
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  letter-spacing: var(--font-12-regular-letter-spacing);
+}
+.overview__item__details .item__result .result {
+  font: var(--font-6);
+  letter-spacing: var(--font-6-letter-spacing);
+  color: var(--neutral-0);
+  text-transform: uppercase;
 }/*# sourceMappingURL=index.css.map */
