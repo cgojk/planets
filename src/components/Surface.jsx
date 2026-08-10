@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import data from "../data.json";
 import linksource from "../assets/icon-source.svg";
 
-export default function Structure() {
+export default function Surface() {
   const {planetName } = useParams();
 
   const planet = data.find(
@@ -21,7 +21,7 @@ export default function Structure() {
        
 
         <img
-          src={planet.images.internal}
+          src={planet.images.geology}
           alt={planet.name}
           className="overview__item__image"
         />
@@ -31,11 +31,11 @@ export default function Structure() {
         </h1>
 
         <p className="overview__item__content">
-          {planet.structure.content}
+          {planet.geology.content}
         </p>
 
         <a
-          href={planet.structure.source}
+          href={planet.geology.source}
           target="_blank"
           rel="noopener noreferrer"
           className="overview__item__source"
