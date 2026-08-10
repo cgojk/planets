@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding:var(--space-5);
 }
 
 .main-content {
@@ -154,37 +155,76 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-8);
   text-align: center;
-  padding: var(--space-10);
+  padding: var(--space-4);
 
   .overview__item__content{
-    font: var(--font-10-regular);
-    letter-spacing: var(--font-10-regular-letter-spacing);
+    font: var(--font-9-regular);
+    letter-spacing: var(--font-9-regular-letter-spacing);
     color: var(--neutral-400);
+  
   }
+  .overview__item__source{
+    font: var(--font-9-regular);
+    letter-spacing: var(--font-9-regular-letter-spacing);
+    color: var(--neutral-400);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:row;
+    gap:var(--space-2);
+    
+
+  }
+
+  .overview__item__source__link{
+  font: var(--font-8-regular);
+  letter-spacing: var(--font-8-regular-letter-spacing);
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+    flex-direction:row;
+    gap:var(--space-2);
+    .link__source__icon{
+      width:14px;
+      height:14px;
+    }
+  
+    
+  }
+
 }
+
 
 .overview__item__details {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  margin-left:0;
+  list-style: none;
+  padding: 0;
+  margin: var(--space-8) 0 0 0;
+
 
 
   .item__result{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    border:1px solid var(--neutral-0);
-    padding:var(--space-4);
+    border:1px solid rgba(255, 255, 255, 0.205);
+    padding:.5rem 1.5rem .5rem 1.5rem;
 
  
   .item__detail {
-    font: var(--font-12-regular);
+    font: var(--font-10-regular);
     color: var(--neutral-400);
     text-transform: uppercase;
-    letter-spacing: var(--font-12-regular-letter-spacing);
+    letter-spacing: var(--font-10-regular-letter-spacing);
   }
   .result {
     font: var(--font-6);

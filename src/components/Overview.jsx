@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
+import linksource from "../assets/icon-source.svg";
 
 export default function Overview() {
   const {planetName } = useParams();
@@ -14,7 +15,7 @@ export default function Overview() {
   }
 
   return (
-    <section className="overview">
+    <section className="overview ">
       <div className="overview__inner container">
 
        
@@ -39,7 +40,10 @@ export default function Overview() {
           rel="noopener noreferrer"
           className="overview__item__source"
         >
-          Source: Wikipedia
+          Source: <span className="overview__item__source__link"
+          >Wikipedia
+          <img src={linksource} alt="link source" className="link__source__icon" />
+          </span>
         </a>
    </div>
       <ul className="overview__item__details">
