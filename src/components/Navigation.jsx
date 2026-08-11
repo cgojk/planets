@@ -17,7 +17,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <header className="header ">
       <div className="header__inner container">
 
-        <Link to="/earth" className="nav-logo-link">
+        <Link to="/earth/overview" className="nav-logo-link">
           <h1 className="nav-logo">Planets</h1> 
         </Link>
 
@@ -29,49 +29,49 @@ const [menuOpen, setMenuOpen] = useState(false);
           <ul className="nav__list">
 
             <li className="nav__items">
-              <NavLink to="/earth" className="nav__items__links">
+              <NavLink to="/earth/overview" className="nav__items__links">
                Earth
               </NavLink>
             </li>
 
             <li className="nav__items">
-              <NavLink to="/mercury" className="nav__items__links">
+              <NavLink to="/mercury/overview" className="nav__items__links">
               Mercury
               </NavLink>
             </li>
 
             <li className="nav__items">
-              <NavLink to="/venus" className="nav__items__links">
+              <NavLink to="/venus/overview" className="nav__items__links">
             Venus
               </NavLink>
             </li>
 
             <li className="nav__items">
-              <NavLink to="/mars" className="nav__items__links">
+              <NavLink to="/mars/overview" className="nav__items__links">
             Mars
               </NavLink>
             </li>
 
             
             <li className="nav__items">
-              <NavLink to="/jupiter" className="nav__items__links">
+              <NavLink to="/jupiter/overview" className="nav__items__links">
             Jupiter
               </NavLink>
             </li>
 
             <li className="nav__items">
-              <NavLink to="/saturn" className="nav__items__links">
+              <NavLink to="/saturn/overview" className="nav__items__links">
             Saturn
               </NavLink>
             </li>
 
             <li className="nav__items">
-              <NavLink to="/uranus" className="nav__items__links">
+              <NavLink to="/uranus/overview" className="nav__items__links">
             Uranus
               </NavLink>
             </li>
             <li className="nav__items">
-              <NavLink to="/neptune" className="nav__items__links">
+              <NavLink to="/neptune/overview" className="nav__items__links">
             Neptune
               </NavLink>
             </li>

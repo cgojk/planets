@@ -143,15 +143,15 @@ a {
 /* ========================== OVERVIEW ================================ */
 
 
-.overview{
+.general__planet-characteristics {
   margin-top:var(--space-11);
 }
-.overview__item__name {
+.general__item__name {
   font: var(--font-3);
   color: var(--neutral-0);
 }
 
-.overview__inner {
+.general__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,13 +159,13 @@ a {
   text-align: center;
   padding: var(--space-4);
 
-  .overview__item__content{
+  .general__item__content{
     font: var(--font-9-regular);
     letter-spacing: var(--font-9-regular-letter-spacing);
     color: var(--neutral-400);
   
   }
-  .overview__item__source{
+  .general__item__source{
     font: var(--font-9-regular);
     letter-spacing: var(--font-9-regular-letter-spacing);
     color: var(--neutral-400);
@@ -178,7 +178,7 @@ a {
 
   }
 
-  .overview__item__source__link{
+  .general__item__source__link{
   font: var(--font-8-regular);
   letter-spacing: var(--font-8-regular-letter-spacing);
   text-decoration-line: underline;
@@ -202,7 +202,7 @@ a {
 }
 
 
-.overview__item__details {
+.general__item__details {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -234,4 +234,45 @@ a {
   }
 }
 
+}
+
+// ===========================================internal menu===========================
+// =============================================================================
+
+
+.internal-navigation{
+  
+  text-transform:uppercase;
+
+  margin-top:var(--space-8);
+
+  .internal-navigation__list{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:var(--space-4);
+    text-decoration:none;
+    list-style:none;
+
+    .internal-navigation__item{
+      font: var(--font-10-bold);
+      letter-spacing: var(--font-10-bold-letter-spacing);
+      color: var(--neutral-400);
+   
+      cursor:pointer;
+      padding:.5rem 1.5rem .5rem 1.5rem;
+      border:1px solid rgba(255, 255, 255, 0.205);
+      transition:all .3s ease-in-out;
+
+      &:hover,
+      &:focus-visible,
+      &.active{
+        color: var(--aqua-50);
+        border-color:var(--aqua-50);
+        background-color:rgba(0, 255, 255, 0.205);
+        
+      }
+    }
+  }
 }

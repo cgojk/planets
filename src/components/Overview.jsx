@@ -2,12 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 import linksource from "../assets/icon-source.svg";
+import InternalNavigation from "./InternalNavigation";
 
 export default function Overview() {
   const {planetName } = useParams();
 
+   console.log("planetName:", planetName);
+
   const planet = data.find(
-    (p) => p.name.toLowerCase() === planetName.toLowerCase()
+    (planet) => planet.name.toLowerCase() === planetName?.toLowerCase()
   );
 
   if (!planet) {
@@ -15,22 +18,22 @@ export default function Overview() {
   }
 
   return (
-    <section className="overview ">
-      <div className="overview__inner container">
+    <section className="general__planet-characteristics ">
+      <div className="general__inner container">
 
-       
+       <InternalNavigation />
 
         <img
           src={planet.images.planet}
           alt={planet.name}
-          className="overview__item__image"
+          className="general__item__image"
         />
 
-         <h1 className="overview__item__name">
+         <h1 className="general__item__name">
           {planet.name}
         </h1>
 
-        <p className="overview__item__content">
+        <p className="general__item__content">
           {planet.overview.content}
         </p>
 
@@ -38,15 +41,15 @@ export default function Overview() {
           href={planet.overview.source}
           target="_blank"
           rel="noopener noreferrer"
-          className="overview__item__source"
+          className="general__item__source"
         >
-          Source: <span className="overview__item__source__link"
+          Source: <span className="general__item__source__link"
           >Wikipedia
           <img src={linksource} alt="link source" className="link__source__icon" />
           </span>
         </a>
    </div>
-      <ul className="overview__item__details">
+      <ul className="general__item__details">
        <li className="item__result"> <p className="item__detail">Rotation Time</p><span className="result time_rotation"> {planet.rotation}</span></li>
         <li className="item__result"><p className="item__detail">Revolution Time</p><span className="result time_revolution"> {planet.revolution}</span></li>
         <li className="item__result"><p className="item__detail">Radius</p><span className="result radius"> {planet.radius}</span></li>
