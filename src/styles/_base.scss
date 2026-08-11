@@ -45,7 +45,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 var(--space-8) var(--space-4);
+  padding: 0 0 var(--space-2) var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.205);
 }
 
 .menu-btn {
@@ -244,7 +245,7 @@ a {
   
   text-transform:uppercase;
 
-  margin-top:var(--space-8);
+  margin-top:var(--space-2);
 
   .internal-navigation__list{
     display:flex;
@@ -254,16 +255,17 @@ a {
     gap:var(--space-4);
     text-decoration:none;
     list-style:none;
+     cursor:pointer;
+      padding:.5rem 1.5rem .5rem 1.5rem;
+      // border:1px solid rgba(255, 255, 255, 0.205);
+      transition:all .3s ease-in-out;gggg
 
     .internal-navigation__item{
       font: var(--font-10-bold);
       letter-spacing: var(--font-10-bold-letter-spacing);
       color: var(--neutral-400);
    
-      cursor:pointer;
-      padding:.5rem 1.5rem .5rem 1.5rem;
-      border:1px solid rgba(255, 255, 255, 0.205);
-      transition:all .3s ease-in-out;
+     
 
       &:hover,
       &:focus-visible,
