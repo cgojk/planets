@@ -90,6 +90,19 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  .nav__items {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+
+    .circle__color--planet {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      
+    }
+  }
 }
 
 .nav__items__links {
@@ -99,6 +112,10 @@ body {
   font: var(--font-9-bold);
   position: relative;
   display: inline-block;
+  display:flex;
+  flex-direction:row;
+  gap:var(--space-2);
+  align-items:center;
 }
 
 .nav__items__links::after {
@@ -146,6 +163,10 @@ a {
 
 .general__planet-characteristics {
   margin-top:var(--space-11);
+
+  .image__container {
+    align-self: center;
+  }
 }
 .general__item__name {
   font: var(--font-3);
@@ -155,7 +176,7 @@ a {
 .general__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
   gap: var(--space-8);
   text-align: center;
   padding: var(--space-4);
@@ -246,19 +267,21 @@ a {
   text-transform:uppercase;
 
   margin-top:var(--space-2);
+  border-bottom:1px solid rgba(255, 255, 255, 0.205);
+ 
 
   .internal-navigation__list{
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     gap:var(--space-4);
     text-decoration:none;
     list-style:none;
      cursor:pointer;
-      padding:.5rem 1.5rem .5rem 1.5rem;
-      // border:1px solid rgba(255, 255, 255, 0.205);
-      transition:all .3s ease-in-out;gggg
+      padding:var(--space-4) var(--space-8) ;
+     
+      transition:all .3s ease-in-out;
 
     .internal-navigation__item{
       font: var(--font-10-bold);

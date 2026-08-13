@@ -18,45 +18,50 @@ export default function Overview() {
   }
 
   return (
-    <section className="general__planet-characteristics ">
-      <div className="general__inner container">
+  <section className="general__planet-characteristics ">
+  <div className="general__inner container">
 
        <InternalNavigation />
+         <div className="image__container">
+            <img
+              src={planet.images.planet}
+              alt={planet.name}
+              className="general__item__image"
+            />
+        </div>
 
-        <img
-          src={planet.images.planet}
-          alt={planet.name}
-          className="general__item__image"
-        />
+        <div className="container_name--content">
+       
+              <h1 className="general__item__name">
+                {planet.name}
+              </h1>
 
-         <h1 className="general__item__name">
-          {planet.name}
-        </h1>
+              <p className="general__item__content">
+                {planet.overview.content}
+              </p>
 
-        <p className="general__item__content">
-          {planet.overview.content}
-        </p>
+              <a
+                href={planet.overview.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="general__item__source"
+              >
+                Source: <span className="general__item__source__link"
+                >Wikipedia
+                <img src={linksource} alt="link source" className="link__source__icon" />
+                </span>
+              </a>
+      </div>
+   <div className="wrapper__general--details">
 
-        <a
-          href={planet.overview.source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="general__item__source"
-        >
-          Source: <span className="general__item__source__link"
-          >Wikipedia
-          <img src={linksource} alt="link source" className="link__source__icon" />
-          </span>
-        </a>
+        <ul className="general__item__details">
+        <li className="item__result"> <p className="item__detail">Rotation Time</p><span className="result time_rotation"> {planet.rotation}</span></li>
+          <li className="item__result"><p className="item__detail">Revolution Time</p><span className="result time_revolution"> {planet.revolution}</span></li>
+          <li className="item__result"><p className="item__detail">Radius</p><span className="result radius"> {planet.radius}</span></li>
+          <li className="item__result"><p className="item__detail">Temperature</p><span className="result temperature"> {planet.temperature}</span></li>
+        </ul>
+      </div>
    </div>
-      <ul className="general__item__details">
-       <li className="item__result"> <p className="item__detail">Rotation Time</p><span className="result time_rotation"> {planet.rotation}</span></li>
-        <li className="item__result"><p className="item__detail">Revolution Time</p><span className="result time_revolution"> {planet.revolution}</span></li>
-        <li className="item__result"><p className="item__detail">Radius</p><span className="result radius"> {planet.radius}</span></li>
-        <li className="item__result"><p className="item__detail">Temperature</p><span className="result temperature"> {planet.temperature}</span></li>
-      </ul>
-
-   
-    </section>
+  </section>
   );
 }

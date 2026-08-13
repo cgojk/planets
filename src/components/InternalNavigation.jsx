@@ -5,7 +5,7 @@ export default function InternalNavigation() {
   const { planetName } = useParams();
 
   return (
-    <nav className="internal-navigation">
+    <div className="internal-navigation">
       <ul className="internal-navigation__list">
         <li className="internal-navigation__item">
           <Link to={`/${planetName}/overview`}>
@@ -25,6 +25,6 @@ export default function InternalNavigation() {
           </Link>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }
