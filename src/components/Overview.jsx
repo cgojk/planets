@@ -28,7 +28,7 @@ export default function Overview() {
               alt={planet.name}
               className="general__item__image"
             />
-        </div>
+         </div>
 
         <div className="container_name--content">
        

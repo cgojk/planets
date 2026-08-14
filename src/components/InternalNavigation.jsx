@@ -1,28 +1,34 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import data from "../data.json";
 
 export default function InternalNavigation() {
   const { planetName } = useParams();
 
+
+  const planet = data.find(
+    (planet) => planet.name.toLowerCase() === planetName?.toLowerCase()
+  );
   return (
-    <div className="internal-navigation">
+    <div className="internal-navigation"
+      style={{ "--planet-color": planet?.color }}>
       <ul className="internal-navigation__list">
         <li className="internal-navigation__item">
-          <Link to={`/${planetName}/overview`}>
+          <NavLink to={`/${planetName}/overview`} end>
             Overview
-          </Link>
+          </NavLink>
         </li>
 
         <li className="internal-navigation__item">
-          <Link to={`/${planetName}/structure`}>
+          <NavLink to={`/${planetName}/structure`} end>
             Structure
-          </Link>
+          </NavLink>
         </li>
 
         <li className="internal-navigation__item">
-          <Link to={`/${planetName}/surface`}>
+          <NavLink to={`/${planetName}/surface`} end>
             Surface
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

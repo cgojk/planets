@@ -20,12 +20,14 @@ export default function Structure() {
       <div className="general__inner container">
 
         <InternalNavigation />
-
+          <div className="image__container">
         <img
           src={planet.images.internal}
           alt={planet.name}
           className="general__item__image"
+         
         />
+        </div>
 
          <h1 className="general__item__name">
           {planet.name}
