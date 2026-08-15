@@ -65,4 +65,43 @@
       display:none;
     }
 }
+
+
+// =====general content =======
+
+.general__inner{
+    display:grid;
+    grid-template-areas:"  image  . "
+                        "content  navigation";
+    ;
+            
+    grid-template-columns: 1fr 1fr;
+    gap:var(--space-10);
+
+
+    .internal-navigation{
+        grid-area: navigation;
+    }
+
+    .circle__color--planet
+    {
+        grid-area: image;
+    }
+
+    .wrapper__general--details{
+        grid-area: content;
+    }
+
+}
+.general__item__details{
+    
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-6);
+    
+}
+.wrapper__general--details{
+    align-items:flex-start
+}
+
 }
