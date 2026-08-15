@@ -28,6 +28,7 @@ export default function Structure() {
          
         />
         </div>
+        <div className="wrapper__general--details">
 
          <h1 className="general__item__name">
           {planet.name}
@@ -48,6 +49,7 @@ export default function Structure() {
           <img src={linksource} alt="link source" className="link__source__icon" />
           </span>
         </a>
+        </div>
    </div>
       <ul className="general__item__details">
        <li className="item__result"> <p className="item__detail">Rotation Time</p><span className="result time_rotation"> {planet.rotation}</span></li>

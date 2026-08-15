@@ -177,6 +177,8 @@ a {
 .general__item__name {
   font: var(--font-3);
   color: var(--neutral-0);
+  margin-top:var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 .general__inner {
@@ -195,9 +197,9 @@ a {
   }
 
   .general__item__content{
-    font: var(--font-9-regular);
-    letter-spacing: var(--font-9-regular-letter-spacing);
-    color: var(--neutral-400);
+    font: var(--font-8-regular);
+    letter-spacing: var(--font-8-regular-letter-spacing);
+    color: var(--neutral-0);
   
   }
   
@@ -243,7 +245,7 @@ a {
   flex-direction: column;
   gap: var(--space-3);
   list-style: none;
-  padding: 0;
+  padding: var(--space-6);
   margin: var(--space-8) 0 0 0;
 
 
