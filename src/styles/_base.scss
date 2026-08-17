@@ -26,6 +26,9 @@ body {
 
 
 /* =========================== NAVIGATION ============================ */
+// ======================================================================
+
+
 
 .nav-logo {
   font: var(--font-4);
@@ -45,8 +48,8 @@ body {
 
 .header__inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // justify-content: space-between;
+
   padding: 0 0 var(--space-2) var(--space-4);
 
 }
@@ -87,7 +90,7 @@ body {
 .nav__list {
   display: flex;
   flex-direction: column;
- 
+ justify-content:space-between;
   gap: var(--space-6);
   list-style: none;
   padding: 0;
