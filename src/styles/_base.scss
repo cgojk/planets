@@ -321,7 +321,7 @@ a {
       letter-spacing: var(--font-10-bold-letter-spacing);
 
     a {
-    color: var(--neutral-400);
+    color: var(--white);
     text-decoration: none;
     display: block;
     padding-bottom: var(--space-4);
@@ -333,10 +333,16 @@ a {
 
       &:hover,
       &:focus-visible,
-      &.active{
-        color: var(--planet-color);
+      &:active{
+        color: var(--white);
         border-bottom: 3px solid var(--planet-color);
         
+      }
+      .number{
+        display:none;
+      }
+      p{
+        color: var(--white);
       }
     }
   }

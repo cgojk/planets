@@ -15,19 +15,23 @@ export default function InternalNavigation() {
       <ul className="internal-navigation__list">
         <li className="internal-navigation__item">
           <NavLink to={`/${planetName}/overview`} end>
-            Overview
+            <span className="number">01</span>
+            <p>Overview</p>
+            
           </NavLink>
         </li>
 
         <li className="internal-navigation__item">
           <NavLink to={`/${planetName}/structure`} end>
-            Structure
+            <span className="number">02</span>
+            <p>Structure</p>
           </NavLink>
         </li>
 
         <li className="internal-navigation__item">
           <NavLink to={`/${planetName}/surface`} end>
-            Surface
+            <span className="number">03</span>
+            <p>Surface</p>
           </NavLink>
         </li>
       </ul>

@@ -20,7 +20,7 @@
         display: none;
     }
 
-   .navigation {
+.navigation {
   position: static;
   right:auto;
   top:auto;
@@ -71,7 +71,9 @@
 }
 
 
-// =====general content =======
+// =====general content ==========================
+// ================================================
+
 
 .general__inner{
     display:grid;
@@ -160,8 +162,41 @@ gap: var(--space-6);
         padding:var(--space-2) ;
         width:100%;
         text-align:center;
+        display:flex;
+        flex-direction:row;
+
+        &:focus-visible{
+           background-color: var(--planet-color);
+           border:none;
+        }
+        &:active{
+            border:none;
+        }
+        &:hover{
+        background-color: var(--neutral-0);
+         border:none;
+        }
+    
+ 
+
+
+        a{
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+            gap:var(--space-2);
+        
+        
+
+        .number{
+            display:inline-block;
+            margin-right:var(--space-2);
            
         }
     }
+    
+}
+}
 }
 }
