@@ -308,6 +308,9 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
+.nav__list .nav__items:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
 .nav__list .nav__items .circle__color--planet {
   width: 20px;
   height: 20px;
@@ -376,8 +379,27 @@ a {
 }
 .general__inner .image__container {
   align-self: center;
-  width: 200px;
-  height: 200px;
+  width: clamp(200px, 30vw, 285px);
+  position: relative;
+  aspect-ratio: 1;
+}
+.general__inner .image__container .general__item__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.general__inner .image__container .geology__image {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  left: 50%;
+  bottom: -5%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 .general__inner .wrapper__general--details {
   padding: var(--space-6);
@@ -487,7 +509,7 @@ a {
   display: none;
 }
 .internal-navigation .internal-navigation__list .internal-navigation__item a p {
-  color: var(--white);
+  color: inherit;
 }
 
 @media only screen and (min-width: 710px) {
@@ -497,6 +519,7 @@ a {
     gap: var(--space-4);
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid var(--border-color);
   }
   .header__inner .nav-logo {
     font: var(--font-3);
@@ -525,14 +548,14 @@ a {
     margin: 0;
     padding: 0;
   }
-  .nav__list .nav__items {
-    display: block;
+  .nav__list .nav__items:not(:last-child) {
+    border-bottom: none;
   }
   .nav__list .nav__items .nav__items__links {
     text-transform: uppercase;
     font: var(--font-8-bold);
   }
-  .nav__list .nav__items .circle__color--planet {
+  .nav__list .circle__color--planet {
     display: none;
   }
   .nav__button-link {
@@ -584,21 +607,24 @@ a {
   .general__inner .general__item__details {
     grid-column: 1/5;
     grid-row: 3/4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    padding: 0;
   }
   .general__item__details {
     display: flex;
     flex-direction: row;
-    gap: var(--space-6);
   }
   .general__item__details .item__result {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    align-items: left;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-4) clamp(1rem, 3vw, 2.5rem);
   }
   .internal-navigation {
     border: none;
@@ -610,32 +636,36 @@ a {
   }
   .internal-navigation .internal-navigation__list .internal-navigation__item {
     border: 1px solid var(--border-color);
-    padding: var(--space-2);
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: row;
   }
-  .internal-navigation .internal-navigation__list .internal-navigation__item:focus-visible {
-    background-color: var(--planet-color);
-    border: none;
-  }
-  .internal-navigation .internal-navigation__list .internal-navigation__item:active {
-    border: none;
-  }
-  .internal-navigation .internal-navigation__list .internal-navigation__item:hover {
-    background-color: var(--neutral-0);
-    border: none;
-  }
   .internal-navigation .internal-navigation__list .internal-navigation__item a {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: var(--space-2);
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    border-bottom: none;
   }
   .internal-navigation .internal-navigation__list .internal-navigation__item a .number {
     display: inline-block;
     margin-right: var(--space-2);
+  }
+  .internal-navigation .internal-navigation__list .internal-navigation__item a.active {
+    background: var(--planet-color);
+    color: var(--planet-contrast);
+    border: none;
+  }
+  .internal-navigation .internal-navigation__list .internal-navigation__item a:hover {
+    background-color: rgba(255, 255, 255, 0.205);
+    color: var(--white);
+    border: none;
+  }
+  .internal-navigation .internal-navigation__list .internal-navigation__item a.active:hover {
+    background-color: var(--planet-color);
+    color: var(--white);
+    border: none;
   }
 }/*# sourceMappingURL=index.css.map */

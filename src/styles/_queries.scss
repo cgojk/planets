@@ -7,6 +7,8 @@
         gap:var(--space-4);
         justify-content:center;
         align-items:center;
+        border-bottom:1px solid var(--border-color);
+      
 
         .nav-logo{
             font: var(--font-3);
@@ -41,19 +43,27 @@
     margin: 0;
     padding: 0;
 
-  .nav__items {
-    display: block;
-    .nav__items__links {
-     text-transform: uppercase;
-     font: var(--font-8-bold);
+    .nav__items:not(:last-child) {
+        border-bottom:none;
+    }
+    .nav__items{
+
+        .nav__items__links{
+            text-transform: uppercase;
+            font: var(--font-8-bold);
+           
+        }
     }
 
     .circle__color--planet {
-      display:none;
-   }
-   
-  }
+      display: none;
+    }
 }
+
+
+
+
+
 
 
 
