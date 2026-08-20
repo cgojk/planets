@@ -11,10 +11,14 @@ export default function InternalNavigation() {
   );
   return (
     <div className="internal-navigation"
-      style={{ "--planet-color": planet?.color }}>
+      style={{ "--planet-color": planet?.color ,
+               "--planet-contrast": planet?.contrastColor
+            }}>
       <ul className="internal-navigation__list">
         <li className="internal-navigation__item">
-          <NavLink to={`/${planetName}/overview`} end>
+          <NavLink to={`/${planetName}/overview`} end
+          className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <span className="number">01</span>
             <p>Overview</p>
             
@@ -22,14 +26,17 @@ export default function InternalNavigation() {
         </li>
 
         <li className="internal-navigation__item">
-          <NavLink to={`/${planetName}/structure`} end>
+          <NavLink to={`/${planetName}/structure`} end
+          className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <span className="number">02</span>
             <p>Structure</p>
           </NavLink>
         </li>
 
         <li className="internal-navigation__item">
-          <NavLink to={`/${planetName}/surface`} end>
+          <NavLink to={`/${planetName}/surface`} end
+          className={({ isActive }) => (isActive ? "active" : "")}>
             <span className="number">03</span>
             <p>Surface</p>
           </NavLink>

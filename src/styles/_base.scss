@@ -198,8 +198,31 @@ a {
 
    .image__container {
     align-self: center;
-    width:200px;
-    height:200px;
+    width: clamp(200px, 30vw, 285px);
+    position:relative;
+    aspect-ratio:1;
+
+    .general__item__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display:block;
+    }
+
+    .geology__image{
+      position: absolute;
+  // width: clamp(70px, 10vw, 110px);
+  width:35%;
+  height:auto;
+
+  object-fit: contain;
+  left:50%;
+  bottom:-5%;
+  transform:translateX(-50%);
+//  right: clamp(-15px, -1.5vw, -5px);
+//   bottom: clamp(-15px, -1.5vw, -5px);
+  z-index: 2;
+    }
  
   }
   .wrapper__general--details{
@@ -247,8 +270,8 @@ a {
     .link__source__icon{
       width:14px;
       height:14px;
-    }
-  }
+      }
+   }
     
   }
 
@@ -342,7 +365,7 @@ a {
         display:none;
       }
       p{
-        color: var(--white);
+        color: inherit;
       }
     }
   }

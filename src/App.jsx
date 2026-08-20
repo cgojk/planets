@@ -12,8 +12,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
   
-        <Route 
-        path="/" element={<Navigate to="/mercury/overview" replace />} 
+        <Route path="/" element={<Navigate to="/mercury/overview" replace />} 
         />
 
         {/* Planet pages */}

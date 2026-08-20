@@ -125,23 +125,32 @@
     .general__item__details{
     grid-column: 1 / 5;
     grid-row: 3 / 4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    width:100%;
+    padding:0;
+  
+    
+   
 
      }
 }
  .general__item__details{
  display: flex;
-flex-direction: row;
-gap: var(--space-6);
+ flex-direction: row;
+
 
 .item__result{
    display:flex;
    flex-direction:column;
-  gap:var(--space-2);
-   align-items:center;
-    justify-content:center;
+   width:100%;
+ 
+   align-items:left;
+    justify-content:flex-start;
+    width:100%;
+    text-align:left;
+   
+ padding: var(--space-4) clamp(1rem, 3vw, 2.5rem);
        }
 
 }
@@ -154,49 +163,55 @@ gap: var(--space-6);
     .internal-navigation__list{
         display:flex;
         flex-direction:column;
-       
         gap:var(--space-4);
         
         .internal-navigation__item{
-            border:1px solid var(--border-color);
-        padding:var(--space-2) ;
-        width:100%;
+        border:1px solid var(--border-color);
+         width:100%;
         text-align:center;
         display:flex;
         flex-direction:row;
+     
+          a{
+        display:flex;
+        flex-direction:row;
+        gap:var(--space-2);
+        width:100%;
+         padding:var(--space-4) var(--space-6);
+         border-bottom:none;
 
-        &:focus-visible{
-           background-color: var(--planet-color);
-           border:none;
-        }
-        &:active{
-            border:none;
-        }
-        &:hover{
-        background-color: var(--neutral-0);
-         border:none;
-        }
-    
- 
-
-
-        a{
-            display:flex;
-            flex-direction:row;
-            justify-content:center;
-            align-items:center;
-            gap:var(--space-2);
-        
-        
-
+                 
         .number{
             display:inline-block;
             margin-right:var(--space-2);
            
+        }
+        // current page
+        &.active{
+            background:var(--planet-color);
+
+            color:var(--planet-contrast);
+            border:none;
+           }
+
+           // HOVER
+          &:hover {
+            background-color:rgba(255, 255, 255, 0.205);
+            color: var(--white);
+            border:none;
+          }
+
+          // Keep active planet colour when hovering it
+          &.active:hover {
+            background-color: var(--planet-color);
+            color: var(--white);
+            border:none;
+          }
+
         }
     }
     
 }
 }
 }
-}
+

@@ -11,23 +11,20 @@ export default function Navigation() {
 
 
 const [menuOpen, setMenuOpen] = useState(false);
-
-
-
-  return (
+return (
 <>
 
-<header className="header ">
-  <div className="header__inner container">
+<header className="header">
+<div className="header__inner container">
 
         <Link to="/earth/overview" className="nav-logo-link">
           <h1 className="nav-logo">Planets</h1> 
         </Link>
 
-        <nav
-          className={`navigation ${menuOpen ? "open" : ""}`}
-          aria-label="homepage Navigation"
-        >
+<nav
+      className={`navigation ${menuOpen ? "open" : ""}`}
+      aria-label="homepage Navigation"
+      >
 
 <ul className="nav__list">
   {data.map((planet) => (
@@ -39,7 +36,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       <div
         className="circle__color--planet"
         style={{ backgroundColor: planet.color }}
-      />
+    />
 
 
       <NavLink
