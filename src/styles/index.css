@@ -674,7 +674,7 @@ a {
 }
 @media only screen and (min-width: 1200px) {
   .main-content {
-    padding-top: var(--space-13);
+    padding-top: var(--space-18);
   }
   .header__inner {
     flex-direction: row;
