@@ -24,7 +24,7 @@ export default function Overview() {
         <div className="image__container">
           <img
             src={planet.images.planet}
-            alt={planet.name}
+           alt={`${planet.name} overview`}
             className="general__item__image"
           />
         </div>

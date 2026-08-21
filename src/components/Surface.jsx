@@ -30,7 +30,7 @@ export default function Surface() {
           />
           <img
             src={planet.images.geology}
-            alt={planet.name}
+            alt={`${planet.name} surface geology`}
             className="geology__image"
           />
          

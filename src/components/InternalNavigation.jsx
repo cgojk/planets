@@ -10,7 +10,8 @@ export default function InternalNavigation() {
     (planet) => planet.name.toLowerCase() === planetName?.toLowerCase()
   );
   return (
-    <div className="internal-navigation"
+    <nav className="internal-navigation"
+    aria-label="Internal navigation"
       style={{ "--planet-color": planet?.color ,
                "--planet-contrast": planet?.contrastColor
             }}>
@@ -42,6 +43,6 @@ export default function InternalNavigation() {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }

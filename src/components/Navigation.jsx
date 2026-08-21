@@ -22,8 +22,12 @@ return (
         </Link>
 
 <nav
+     id="planet-navigation"
       className={`navigation ${menuOpen ? "open" : ""}`}
-      aria-label="homepage Navigation"
+      aria-label="Planet navigation"
+      aria-hidden={!menuOpen}
+       inert={!menuOpen ? "" : undefined}
+     
       >
 
 <ul className="nav__list">
@@ -61,9 +65,11 @@ return (
         </nav>
 
         <button
-          className="menu-btn"
-          aria-label="toggle menu"
-          onClick={() => setMenuOpen(!menuOpen)}
+         className="menu-btn"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
+       aria-controls="planet-navigation"
+       onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <img src={hamburguer} alt="Open menu" />}
         </button>
