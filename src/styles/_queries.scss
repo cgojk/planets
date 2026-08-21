@@ -1,8 +1,8 @@
 // ===============================
 // TABLET / DESKTOP
-// 710px+
+// 768px+
 // ===============================
-@media only screen and (min-width: 710px) {
+@media only screen and (min-width: 768px) {
 
     .main-content {
 
@@ -245,6 +245,9 @@
     justify-content:space-between;
     align-items:center;
     gap:var(--space-4);
+     max-width: none;
+    margin: 0;
+    padding: 0 var(--space-10);
    
 
 }
@@ -261,6 +264,12 @@
 .wrapper__general--details{
     grid-column: 3 / 5;
     grid-row: 1 / 2;
+    padding:0;
+
+    .general__item__name{
+        font: var(--font-2);
+        letter-spacing: var(--font-2-letter-spacing);
+    }
  
 }
 
@@ -270,6 +279,10 @@
 .internal-navigation{
         grid-column: 3/ 5;
         grid-row: 2 / 3;
+
+        .internal-navigation__list{
+          padding: 0;
+        }
        
       
      }
