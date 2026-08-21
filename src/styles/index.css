@@ -237,7 +237,6 @@ body {
 
 .main-content {
   flex: 1;
-  padding-top: var(--space-13);
 }
 
 /* =========================== NAVIGATION ============================ */
@@ -674,6 +673,9 @@ a {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .main-content {
+    padding-top: var(--space-13);
+  }
   .header__inner {
     flex-direction: row;
     justify-content: space-between;
