@@ -56,5 +56,3 @@ React Router documentation — Routing and navigation in React
 ## Author
 
 Catalina G.
-
-## Acknowledgments
