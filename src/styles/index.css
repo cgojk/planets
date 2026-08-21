@@ -374,7 +374,7 @@ a {
 .general__inner {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: var(--space-8);
   text-align: center;
   padding: var(--space-4);
 }
