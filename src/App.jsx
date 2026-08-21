@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import Overview from "./components/Overview";
-import Structure from "./components/structure";
+import Structure from "./components/Structure";
 import Surface from "./components/Surface";
 export default function App() {
 
