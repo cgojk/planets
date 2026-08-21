@@ -18,7 +18,7 @@ return (
 <div className="header__inner container">
 
         <Link to="/earth/overview" className="nav-logo-link">
-          <h1 className="nav-logo">Planets</h1> 
+          <h1 className="nav-logo">The Planets</h1> 
         </Link>
 
 <nav

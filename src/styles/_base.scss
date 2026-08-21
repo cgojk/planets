@@ -24,6 +24,7 @@ body {
 
 .main-content {
   flex: 1;
+  padding-top: var(--space-13);
 }
 
 
@@ -114,7 +115,7 @@ body {
  &:not(:last-child) {
       border-bottom: 1px solid var(--border-color);
     }
-    
+
     
 
     .circle__color--planet {
